@@ -34,7 +34,7 @@ body {
 }
 .v1:hover p {
   background-size: 100% 5px;
-   cursor: pointer;
+   
 }
 .v2 p {
   background-position: left;
@@ -53,6 +53,7 @@ body {
 .v3:hover p {
   color: #000;
   background-size: 0% 100%;
+  cursor: pointer;
 }
 .v4 p {
   background-position: bottom left;
