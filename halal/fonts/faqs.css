@@ -1,0 +1,47 @@
+/*start my framework*/
+/*start my vraiables*/
+/*end my vraiables*/
+/*start my mixins */
+/*start my mixins */
+/*for importing my components */
+/*end my framework*/
+/*start faqs*/
+.faqs .faqs-list .item {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.faqs .faqs-list .item h3 {
+  border: 1.5px solid #ece5df;
+  padding: 13px;
+  border-radius: 25px;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+}
+.faqs .faqs-list .item h3:hover, .faqs .faqs-list .item h3:focus {
+  background-color: #f3f2ed;
+  border: 1.5px solid #f3f2ed;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.faqs .faqs-list .item h3 i {
+  position: absolute;
+  right: 37px;
+  font-size: 16px;
+}
+.faqs .faqs-list .item p {
+  padding-left: 20px;
+  width: 88%;
+  line-height: 29px;
+  display: none;
+}
+
+.news-letter {
+  background: #f3f2ed;
+}
+
+/*end faqs*/
