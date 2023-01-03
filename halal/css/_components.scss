@@ -1,0 +1,26 @@
+/*start my vraiables*/
+$maincolor: #c69c60;
+$copyright-topnav:#262a31;
+$heading-footer:#31353d;
+$white-text:#ffffff;
+$gray-text:#9a9a9a;
+/*end my vraiables*/
+
+
+/*start my mixins */
+@mixin my-transition{
+    transition: all 0.3s ease ;
+    -webkit-transition: all 0.3s ease ;
+    -moz-transition: all 0.3s ease ;
+    -o-transition: all 0.3s ease ;
+    -ms-transition: all 0.3s ease ;   
+}
+@mixin my-transition-two{
+    transition: all 0.4s ease ;
+    -webkit-transition: all 0.4s ease ;
+    -moz-transition: all 0.4s ease ;
+    -o-transition: all 0.4s ease ;
+    -ms-transition: all 0.4s ease ;   
+}
+
+/*start my mixins */
