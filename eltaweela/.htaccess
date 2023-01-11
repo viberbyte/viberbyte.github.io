@@ -1,1 +1,4 @@
 
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
+RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
