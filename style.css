@@ -12,7 +12,7 @@ body {
 }
 .container h1 {
   font-size: 2.2rem;
-  color: green;
+  
 }
 .container .instruction {
   font-size: 1.8rem;
@@ -26,6 +26,7 @@ body {
   display: inline;
   background-repeat: no-repeat;
   transition: all 500ms ease-in-out;
+  color: green;
 }
 .v1 p {
   background-position: bottom left;
