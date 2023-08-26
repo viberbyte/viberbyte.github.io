@@ -1,0 +1,33 @@
+/* CSS Reset used: http://seodesigns.com/projects/codepen/reset.css */
+.sticky-footer {
+  display: block;
+  height: 58px;
+  background: #006848;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+}
+.sticky-footer .one-fourth {
+  width: 25%;
+  float: left;
+  color: #fff;
+  text-align: center;
+  height: 58px;
+  position: relative;
+  cursor: pointer;
+}
+.sticky-search,
+.sticky-filters,
+.sticky-map,
+.sticky-radius {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-top: 11px;
+}
+.sticky-footer .one-fourth p {
+  font-size: 10px;
+  margin-top: 3px;
+}
