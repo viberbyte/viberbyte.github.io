@@ -1,0 +1,70 @@
+.first-title {
+    color: $color-orange;
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 1.9rem;
+    }
+}
+
+.first-title-white {
+    @extend .first-title;
+    color: white;
+}
+
+.first-title-center {
+    @extend .first-title;
+    text-align: center;
+}
+
+.second-title {
+    position: relative;
+    margin-block: 1.4rem;
+    color: $color-blue-dark;
+    font-size: 2.7rem;
+    font-weight: 600;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    &::after {
+        content: "";
+        width: 25%;
+        height: 0.23rem;
+        border-radius: 1.2rem;
+        position: absolute;
+        bottom: -2.4rem;
+        right: 0;
+        background-color: $color-blue-dark;
+
+        @include breakpoint(tablet) {
+            width: 20%;
+            right: 40%;
+            bottom: -3rem;
+        }
+    }
+
+    &.sm::after {
+        bottom: -1.3rem;
+        right: 0;
+
+        @include breakpoint(mobile) {
+            text-align: center;
+            right: 40%;
+        }
+    }
+}
+
+.second-title-center {
+    @extend .second-title;
+    text-align: center;
+
+    &::after {
+        width: 10%;
+        right: 45%;
+    }
+}

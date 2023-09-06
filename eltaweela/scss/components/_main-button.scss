@@ -1,0 +1,42 @@
+.main-btn {
+    min-width: 14rem;
+    width: 23rem;
+    padding: 1.4rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    @include flex-center-row;
+    background-color: $color-blue-dark;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    @include transition(background-color, 0.35, ease-in, 0);
+
+    @include breakpoint(tablet) {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    @media (min-width: 993px) and (max-width: 1371px) {
+        margin-inline: 0;
+        text-align: start;
+    }
+
+    @media (min-width: 1372px) and (max-width: 1429px) {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    @media (min-width: 1430px) {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: $color-blue-light;
+    }
+
+    &:focus,
+    &:active {
+        background-color: $color-blue-dark;
+    }
+}

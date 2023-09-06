@@ -1,0 +1,108 @@
+.benefits {
+    width: 100%;
+    padding-top: 3rem;
+    counter-reset: add;
+
+    &__content {
+        width: 100%;
+        margin-top: 10rem;
+        @include grid-columns(4);
+        gap: 2rem;
+
+        @include breakpoint(tablet) {
+            @include grid-columns(2);
+            gap: 5rem;
+        }
+
+        @include breakpoint(mobile) {
+            @include grid-columns(1);
+        }
+
+        &__card {
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+            text-align: center;
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                margin-top: 5rem;
+
+                @include breakpoint(tablet) {
+                    margin-top: 0;
+                }
+            }
+
+            &::before {
+                --width-height: 4rem;
+
+                counter-increment: add;
+                content: counter(add) "";
+                width: var(--width-height);
+                height: var(--width-height);
+                border-radius: 50%;
+                @include flex-center-row;
+                position: absolute;
+                top: -3rem;
+                right: 0;
+                background-color: $color-black;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+
+                @include breakpoint(mobile) {
+                    content: none;
+                }
+            }
+
+            &__img {
+                width: 14rem;
+                height: 14rem;
+                border-radius: 50%;
+                @include flex-center-row;
+                margin-bottom: 2.5rem;
+                margin-inline: auto;
+                text-align: center;
+                background: rgb(255, 255, 255);
+                background: -moz-linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgb(231, 140, 65) 28%,
+                    rgb(255, 132, 24) 79%
+                );
+                background: -webkit-linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgb(231, 140, 65) 28%,
+                    rgb(255, 132, 24) 79%
+                );
+                background: linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgb(231, 140, 65) 28%,
+                    rgb(255, 132, 24) 79%
+                );
+
+                img {
+                    width: 45%;
+                    @include prefixing(object-fit, cover);
+                    text-align: center;
+                    @include prefixing(filter, brightness(0) invert(1));
+                }
+            }
+
+            &__title {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+                color: $color-blue-dark;
+                font-weight: 900;
+            }
+
+            &__desc {
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+        }
+    }
+}

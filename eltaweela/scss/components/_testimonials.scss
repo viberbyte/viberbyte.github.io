@@ -1,0 +1,192 @@
+$card-border-radius: 1.3rem;
+
+.testimonials {
+    position: relative;
+    padding-top: 7rem;
+
+    &__bottom {
+        width: 100%;
+        min-height: 30rem;
+        text-align: center;
+        padding-block: 4rem;
+        background-color: $color-blue-dark;
+        box-shadow: 20px -7rem 5rem 5rem $color-blue-dark;
+
+        @include breakpoint(mobile) {
+            min-height: 22rem;
+        }
+
+        @include breakpoint(mobile) {
+            min-height: 27rem;
+        }
+
+        &__desc {
+            width: 80%;
+            margin-top: 4rem;
+            margin-inline: auto;
+            font-size: 2rem;
+            line-height: 1.6;
+            color: #fff;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+}
+
+.slide-container {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    border-radius: $card-border-radius;
+}
+
+.card {
+    width: 100%;
+    border-radius: $card-border-radius;
+    background: #fff;
+}
+
+.image-box {
+    height: 30rem;
+    border-radius: $card-border-radius;
+    position: relative;
+    box-shadow: 0 2rem 5rem -5rem $color-blue-dark;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: $card-border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #00000049;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: $card-border-radius;
+        @include prefixing(object-fit, cover);
+        box-shadow: 0 2rem 5rem -5rem $color-blue-dark inset;
+    }
+}
+
+.swiper-btn {
+    width: 5rem;
+    height: 3.45rem;
+    @include flex-center-row;
+    position: absolute;
+    top: 45%;
+    color: #fff;
+    background: $color-orange;
+    cursor: pointer;
+    z-index: 999999;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        z-index: 9999999;
+    }
+}
+
+%main {
+    content: "";
+    width: 3.44rem;
+    height: 3.44rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    background-color: $color-orange;
+    // background-color: blue;
+}
+
+.swiper-right {
+    position: absolute;
+
+    &::before {
+        @extend %main;
+        right: -34%;
+    }
+
+    i {
+        left: 45%;
+    }
+}
+
+.swiper-left {
+    position: absolute;
+
+    &::before {
+        @extend %main;
+        left: -34%;
+    }
+
+    i {
+        right: 45%;
+    }
+}
+
+.swiper-button-next {
+    right: 20%;
+
+    @include breakpoint(tablet) {
+        right: 10%;
+    }
+}
+
+.swiper-button-prev {
+    left: 20%;
+
+    @include breakpoint(tablet) {
+        left: 10%;
+    }
+}
+
+.second__next,
+.second__prev {
+    width: 4rem;
+    height: 4rem;
+    @include flex-center-column;
+    border-radius: 50%;
+    top: 50%;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+    &::before {
+        content: none;
+    }
+
+    i {
+        margin: 0;
+        padding: 0;
+        right: 25%;
+    }
+}
+
+.second__next {
+    right: 0%;
+}
+
+.second__prev {
+    left: 0%;
+}

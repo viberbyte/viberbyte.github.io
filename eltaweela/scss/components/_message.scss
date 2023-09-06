@@ -1,0 +1,182 @@
+.message {
+    width: 100%;
+    margin-top: 5rem;
+
+    &__content {
+        width: 100%;
+
+        &__header {
+            width: 100%;
+            margin-inline: auto;
+            @include grid-columns(2);
+            gap: 10rem 6rem;
+
+            @media (min-width: 1430px) {
+                gap: 10rem;
+            }
+
+            @include breakpoint(tablet) {
+                @include grid-columns(1);
+                gap: 6rem;
+            }
+
+            @include breakpoint(mobile) {
+                gap: 22rem 6rem;
+            }
+
+            &__card {
+                width: 100%;
+                height: 15rem;
+                @include flex-center-row;
+                align-items: start;
+                gap: 3rem;
+
+                @include breakpoint(mobile) {
+                    @include flex-center-column;
+                    gap: 6rem;
+                }
+
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+
+                &-img {
+                    margin-top: 2rem;
+                    position: relative;
+                    -webkit-margin-end: 2.4rem;
+                    margin-inline-end: 2.4rem;
+                    @include flex-center-row;
+
+                    @media (max-width: 116rem) {
+                        width: 13rem;
+                        text-align: center;
+                    }
+
+                    @include breakpoint(tablet) {
+                        -webkit-margin-start: 3.4rem;
+                        margin-inline-start: 3.4rem;
+                    }
+
+                    @media (max-width: 83rem) {
+                        -webkit-margin-start: 3rem;
+                        margin-inline-start: 3rem;
+                    }
+
+                    @include breakpoint(mobile) {
+                        width: 8rem;
+                        margin-bottom: 1.4rem;
+                    }
+
+                    .blob-svg {
+                        width: 100%;
+                        position: relative;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        transform: scale(3.2);
+
+                        @media (min-width: 1430px) {
+                            width: 70%;
+                        }
+
+                        @include breakpoint(tablet) {
+                            transform: scale(2.1);
+                        }
+
+                        @include breakpoint(mobile) {
+                            transform: scale(3.5);
+                        }
+                    }
+
+                    .goal-pic {
+                        width: 5rem;
+                        @include flex-center-row;
+                        position: absolute;
+                        z-index: 1;
+                        @include prefixing(animation, scale-rotate-1-2 3s ease-in-out 0s infinite normal both);
+                        @include prefixing(animation-play-state, running);
+                    }
+                }
+
+                &-info {
+                    align-self: flex-start;
+
+                    &__title {
+                        font-size: 2.2rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    &__desc {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        &__footer {
+            width: 100%;
+            padding-top: 13rem;
+
+            &__title {
+                width: 100%;
+                text-align: center;
+                font-size: 1.6rem;
+
+                a {
+                    font-weight: bold;
+                    text-decoration: underline;
+                    color: $color-blue-dark;
+                }
+            }
+
+            &__layout {
+                width: 100%;
+                @include grid-columns(2);
+                gap: 4rem;
+                margin-top: 10rem;
+
+                @include breakpoint(tablet) {
+                    margin-inline: auto;
+                    text-align: center;
+                    @include grid-columns(1);
+                }
+
+                &__first {
+                    &__desc {
+                        width: 85%;
+                        margin-top: 5rem;
+                        line-height: 1.7;
+                        font-size: 1.44rem;
+                        font-weight: 700;
+                        color: $color-blue-dark;
+
+                        @include breakpoint(tablet) {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &__second {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    @include prefixing(animation, top-bottom 2.5s ease-in-out 0s infinite normal both);
+                    @include prefixing(animation-play-state, running);
+
+                    img {
+                        width: 86%;
+                        @include prefixing(object-fit, cover);
+
+                        @include breakpoint(tablet) {
+                            width: 50%;
+                        }
+
+                        @include breakpoint(mobile) {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
