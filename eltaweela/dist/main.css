@@ -270,7 +270,7 @@ a:active, a:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100000000000000000000000;
-  background: url("../assets/svg/ElTaweela.svg") center center no-repeat #111721;
+  background: url("../assets/svg/loader.svg") center center no-repeat #111721;
 }
 
 .navbar {
