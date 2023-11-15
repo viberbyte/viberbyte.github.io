@@ -24,7 +24,7 @@ body {
 }
 
 .links {
-  --link-size: calc(var(--base-grid)*25);
+  --link-size: calc(var(--base-grid)*27);
   color: var(--colour-black);
   display: flex;
   justify-content: center;
