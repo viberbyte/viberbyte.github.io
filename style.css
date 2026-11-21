@@ -1,71 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial;
-  font-size: 1.5rem;
-  line-height: 150%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
   background: #edf2f7;
   color: #2d3748;
 }
+
 .container {
-  max-width: 600px;
+  width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 1em;
+  padding: 28px 24px 48px;
 }
-.container h1 {
-  font-size: 2.2rem;
-  
+
+.site-header {
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
-.container .instruction {
-  font-size: 1.8rem;
-  margin-bottom: 4rem;
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.profile-column {
+  min-width: 0;
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.instruction {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
   font-style: italic;
 }
-.content {
-  margin-bottom: 4em;
+
+.about-column {
+  min-width: 0;
 }
+
+.about-column h1 {
+  margin: 0 0 16px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.content {
+  margin-bottom: 2em;
+}
+
 .content p {
   display: inline;
   background-repeat: no-repeat;
   transition: all 500ms ease-in-out;
-
 }
+
 .v1 p {
   background-position: bottom left;
   background-size: 0% 5px;
   background-image: linear-gradient(#e53e3e, #e53e3e);
   padding-bottom: 5px;
 }
-.v1:hover p {
-  background-size: 100% 5px;
-   
-}
+.v1:hover p { background-size: 100% 5px; }
+
 .v2 p {
   background-position: left;
   background-size: 0% 100%;
   background-image: linear-gradient(#f6e05e, #f6e05e);
 }
-.v2:hover p {
-  background-size: 100% 100%;
-}
+.v2:hover p { background-size: 100% 100%; }
+
 .v3 p {
   color: transparent;
   background-position: right;
   background-size: 100% 100%;
   background-image: linear-gradient(#a0aec0, #a0aec0);
-}
-.v3:hover p {
-  color: #000;
-  background-size: 0% 100%;
   cursor: pointer;
 }
+.v3:hover p,
+.v3:focus-within p {
+  color: #000;
+  background-size: 0% 100%;
+}
+
 .v4 p {
   background-position: bottom left;
   background-size: 0% 3px;
   background-image: repeating-linear-gradient(to right, #4834d4 0 3px, transparent 0 6px);
   padding-bottom: 3px;
 }
-.v4:hover p {
-  background-size: 100% 3px;
-}
+.v4:hover p { background-size: 100% 3px; }
+
 .v5 p {
   background-position: center left;
   background-size: 100% 3px;
@@ -77,6 +117,7 @@ body {
   color: #fff;
   background-image: linear-gradient(to right, #e53e3e, #e53e3e);
 }
+
 .v6 p {
   background-position: center left;
   background-size: 100% 4px;
@@ -88,6 +129,7 @@ body {
   background-size: 100% 2px;
   font-style: italic;
 }
+
 .v7 p {
   background-position: left;
   background-size: 0% 100%;
@@ -97,6 +139,7 @@ body {
   background-position: right;
   background-size: 100% 100%;
 }
+
 .v8 p {
   background-position: left;
   background-size: 0% 100%;
@@ -105,6 +148,28 @@ body {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-.v8:hover p {
-  background-size: 100% 100%;
+.v8:hover p { background-size: 100% 100%; }
+
+@media (max-width: 650px) {
+  .container {
+    padding: 22px 18px 36px;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile-column {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+
+  .about-column h1 {
+    font-size: 1.55rem;
+  }
+
+  .instruction {
+    font-size: 0.95rem;
+  }
 }
